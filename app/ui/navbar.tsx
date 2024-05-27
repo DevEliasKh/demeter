@@ -40,7 +40,7 @@ export default function Navbar() {
          >
             <Box
                sx={{
-                  display: { xs: "none", md: "flex" },
+                  display: { xs: "none", sm: "flex" },
                   gap: 2,
                   flexDirection: "row-reverse",
                }}
@@ -56,30 +56,45 @@ export default function Navbar() {
                ))}
             </Box>
             <IconButton
-               sx={{ display: { xs: "flex", md: "none" } }}
+               id="basic-btn"
+               aria-controls={Boolean(menuShow) ? "basic-menu" : undefined}
+               aria-haspopup="true"
+               aria-expanded={Boolean(menuShow) ? "true" : undefined}
+               sx={{ display: { xs: "flex", sm: "none" } }}
                onClick={openMenu}
             >
                <MenuIcon />
             </IconButton>
             <Menu
+               id="basic-menu"
+               anchorEl={menuShow}
                open={Boolean(menuShow)}
                onClose={closeMenu}
-               sx={{
-                  display: { xs: "flex", md: "none" },
-                  gap: 2,
-                  flexDirection: "column",
+               MenuListProps={{
+                  "aria-labelledby": "basic-button",
                }}
+               sx={{
+                  display: { xs: "flex", sm: "none" },
+                  gap: 2,
+                  width: "100%",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                  justifyContent: "flex-end",
+                  "& .MuiMenu-paper": { backgroundColor: "primary.main" },
+               }}
+               elevation={2}
             >
-               <MenuList>
-                  {navbarLink.map((item) => (
-                     <MenuItem
-                        key={item}
-                        sx={{ color: "secondary.main", direction: "rtl" }}
-                     >
-                        {item}
-                     </MenuItem>
-                  ))}
-               </MenuList>
+               {navbarLink.map((item) => (
+                  <MenuItem
+                     key={item}
+                     sx={{
+                        color: "secondary.main",
+                        direction: "rtl",
+                     }}
+                  >
+                     <Typography sx={{ direction: "rtl" }}>{item}</Typography>
+                  </MenuItem>
+               ))}
             </Menu>
             <IconButton color="secondary">
                <SpaIcon />
