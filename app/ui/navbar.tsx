@@ -1,10 +1,13 @@
 "use client";
 
+import "../style/custom.css";
+
 import {
    AppBar,
    Box,
    Button,
    IconButton,
+   Link,
    Menu,
    MenuItem,
    MenuList,
@@ -30,7 +33,11 @@ export default function Navbar() {
    };
 
    return (
-      <AppBar position="static" elevation={0}>
+      <AppBar
+         position="static"
+         elevation={0}
+         sx={{ borderRadius: "1rem", mt: "1rem" }}
+      >
          <Toolbar
             sx={{
                display: "flex",
@@ -92,7 +99,7 @@ export default function Navbar() {
                         direction: "rtl",
                      }}
                   >
-                     <Typography sx={{ direction: "rtl" }}>{item}</Typography>
+                     <Link sx={{ direction: "rtl" }}>{item}</Link>
                   </MenuItem>
                ))}
             </Menu>
