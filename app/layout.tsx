@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import Navbar from "./ui/navbar";
+import Navbar from "./ui/component/navbar";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./ui/theme";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
    children: React.ReactNode;
 }>) {
    return (
-      <html lang="en">
+      <html lang="en" dir="rtl">
          <ThemeProvider theme={theme}>
             <body>{children}</body>
          </ThemeProvider>

@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
-import Navbar from "./ui/navbar";
+import Navbar from "./ui/component/navbar";
 
 export default function Home() {
    return (
@@ -9,6 +9,7 @@ export default function Home() {
          <Box
             sx={{
                display: "flex",
+               flexDirection: { xs: "column", sm: "row-reverse" },
                Width: "100vw",
                justifyContent: "space-between",
                alignItems: "center",
@@ -24,14 +25,34 @@ export default function Home() {
                sx={{
                   display: "flex ",
                   flexDirection: "column",
-                  alignItems: "flex-end",
+                  mr: "10vw",
+                  gap: "1vw",
+                  maxWidth: "80ch",
                }}
             >
-               <Typography variant="h1">دمتر</Typography>
-               <Typography>
+               <Typography
+                  sx={{
+                     mb: "1vw",
+                     fontWeight: "900",
+                     fontSize: "clamp(3vw,2rem,10vw)",
+                  }}
+               >
+                  دمتر
+               </Typography>
+               <Typography
+                  color="secondary"
+                  sx={{
+                     fontWeight: "400",
+                     fontSize: "clamp(2vw,1.6rem,3vw)",
+                  }}
+               >
                   یادگیری هر آنچه برای پرورش گل و گیاه در خانه نیاز دارید
                </Typography>
-               <Typography>
+               <Typography
+                  sx={{
+                     fontSize: "clamp(1vw,1.2rem,2vw)",
+                  }}
+               >
                   ما در اینجا با گردآوری برترین مقالات و آموزش های روز دنیا به
                   شما در نگه داری و پروش گل و گیاه در خانه کمک می کتیم
                </Typography>
@@ -39,7 +60,12 @@ export default function Home() {
                <Button
                   variant="contained"
                   sx={{
-                     alignSelf: "self-start",
+                     alignSelf: "self-end",
+                     "&:hover": {
+                        color: "primary.main",
+                        backgroundColor: "secondary.main",
+                     },
+                     fontSize: "clamp(1vw,1rem,2vw)",
                   }}
                >
                   مشاهده مقالات

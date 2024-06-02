@@ -1,6 +1,6 @@
 "use client";
 
-import "../style/custom.css";
+import "../../style/custom.css";
 
 import {
    AppBar,
@@ -41,7 +41,6 @@ export default function Navbar() {
          <Toolbar
             sx={{
                display: "flex",
-               flexDirection: "row-reverse",
                justifyContent: "space-between",
             }}
          >
@@ -49,7 +48,6 @@ export default function Navbar() {
                sx={{
                   display: { xs: "none", sm: "flex" },
                   gap: 2,
-                  flexDirection: "row-reverse",
                }}
             >
                {navbarLink.map((item) => (
@@ -99,7 +97,9 @@ export default function Navbar() {
                         direction: "rtl",
                      }}
                   >
-                     <Link sx={{ direction: "rtl" }}>{item}</Link>
+                     <Button sx={{ direction: "rtl" }} color="secondary">
+                        {item}
+                     </Button>
                   </MenuItem>
                ))}
             </Menu>
