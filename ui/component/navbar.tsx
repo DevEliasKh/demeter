@@ -1,6 +1,6 @@
 "use client";
 
-import "../../style/custom.css";
+import "@/style/custom.css";
 
 import {
    AppBar,

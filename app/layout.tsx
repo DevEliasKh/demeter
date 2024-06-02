@@ -1,9 +1,8 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import Navbar from "./ui/component/navbar";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "./ui/theme";
+import { theme } from "@/ui/theme";
 
 export const metadata: Metadata = {
    title: "Demeter",

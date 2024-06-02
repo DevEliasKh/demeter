@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
-import Navbar from "./ui/component/navbar";
+import Navbar from "@/ui/component/navbar";
+import PlantArea from "@/ui/component/plantArea";
 
 export default function Home() {
    return (
@@ -72,6 +73,7 @@ export default function Home() {
                </Button>
             </Box>
          </Box>
+         <PlantArea />
       </Container>
    );
 }
