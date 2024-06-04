@@ -47,6 +47,8 @@ function PlantCard(plant: plantType) {
             alt={plant.name}
             sx={{
                width: "20%",
+               height: "15vh",
+               objectFit: "cover",
             }}
          ></Box>
          <Box
