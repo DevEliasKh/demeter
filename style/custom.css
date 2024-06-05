@@ -1,5 +1,6 @@
 .css-135snu5-MuiButtonBase-root-MuiButton-root,
-.css-6vb3lw-MuiTypography-root-MuiLink-root.MuiLink-root {
+.css-6vb3lw-MuiTypography-root-MuiLink-root.MuiLink-root,
+.css-1qaqehy-MuiTypography-root-MuiLink-root.MuiLink-root {
    display: flex;
    flex-direction: column;
    animation: myAnim2 1s ease-in-out 3.3s 1 normal forwards;
