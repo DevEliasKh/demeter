@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Card, Grid, Link, Typography } from "@mui/material";
 
 import data from "@/data/plants.json";
 
@@ -46,8 +46,8 @@ function PlantCard(plant: plantType) {
             src={plant.imgRcs}
             alt={plant.name}
             sx={{
-               width: "20%",
-               height: "15vh",
+               width: "25%",
+               height: "20vh",
                objectFit: "cover",
             }}
          ></Box>
@@ -55,19 +55,25 @@ function PlantCard(plant: plantType) {
             sx={{
                display: "flex",
                flexDirection: "column",
+               justifyContent: "space-between",
                width: "100%",
+               height: "20vh",
                p: 2,
+               boxSizing: "border-box",
             }}
          >
             <Typography>{plant.name}</Typography>
-            <Box
+            <Link
+               href="#"
                component="a"
                sx={{
                   alignSelf: "flex-end",
+                  fontFamily: "Va",
                }}
+               color="secondary"
             >
                ادامه مطلب
-            </Box>
+            </Link>
          </Box>
       </Card>
    );

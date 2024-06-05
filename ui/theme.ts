@@ -15,4 +15,14 @@ export const theme = createTheme({
    typography: {
       fontFamily: "Vazirmatn, sans-serif",
    },
+   components: {
+      MuiLink: {
+         styleOverrides: {
+            root: {
+               fontFamily: "Vazirmatn, sans-serif",
+               textDecoration: "none",
+            },
+         },
+      },
+   },
 });
