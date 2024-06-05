@@ -62,7 +62,15 @@ function PlantCard(plant: plantType) {
                boxSizing: "border-box",
             }}
          >
-            <Typography>{plant.name}</Typography>
+            <Typography
+               sx={{
+                  pt: "4vh",
+                  fontSize: "1.2rem",
+                  fontWeight: "500",
+               }}
+            >
+               {plant.name}
+            </Typography>
             <Link
                href="#"
                component="a"

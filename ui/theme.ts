@@ -19,8 +19,10 @@ export const theme = createTheme({
       MuiLink: {
          styleOverrides: {
             root: {
-               fontFamily: "Vazirmatn, sans-serif",
-               textDecoration: "none",
+               "&.MuiLink-root": {
+                  textDecoration: "none",
+                  fontFamily: "Vazirmatn, sans-serif",
+               },
             },
          },
       },

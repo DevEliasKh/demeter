@@ -1,22 +1,22 @@
 [
    {
       "id": 1,
-      "name": "something1",
+      "name": "Money tree",
       "imgRcs": "img/data-plant/01.jpg"
    },
    {
       "id": 2,
-      "name": "something2",
+      "name": "Pothos",
       "imgRcs": "img/data-plant/02.jpg"
    },
    {
       "id": 3,
-      "name": "something3",
+      "name": "Spider Plant",
       "imgRcs": "img/data-plant/03.jpg"
    },
    {
       "id": 4,
-      "name": "something4",
+      "name": "Hoya",
       "imgRcs": "img/data-plant/04.jpg"
    }
 ]
