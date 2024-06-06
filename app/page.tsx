@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
 import BlogArea from "@/ui/component/blogArea";
+import Gallery from "@/ui/component/gallery";
 import Navbar from "@/ui/component/navbar";
 import PlantArea from "@/ui/component/plantArea";
 
@@ -75,7 +76,9 @@ export default function Home() {
             </Box>
          </Box>
          <PlantArea />
-         <BlogArea/>
+         <BlogArea />
+         {/* TODO: add gallery */}
+         {/* <Gallery /> */}
       </Container>
    );
 }

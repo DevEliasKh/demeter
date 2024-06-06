@@ -21,8 +21,8 @@ export default function BlogArea() {
          <Grid item xs={12}>
             <Typography
                sx={{
-                  fontSize: "1.5rem",
-                  fontWeight: "500",
+                  fontSize: "2rem",
+                  fontWeight: "700",
                }}
             >
                آخرین مقالات

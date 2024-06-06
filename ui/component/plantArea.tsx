@@ -17,8 +17,8 @@ export default function PlantArea() {
          <Grid item xs={12}>
             <Typography
                sx={{
-                  fontWeight: "500",
-                  fontSize: "1.5rem",
+                  fontWeight: "700",
+                  fontSize: "2rem",
                }}
             >
                گیاهان آپارتمانی را بهتر بشناسیم
