@@ -36,7 +36,7 @@ export default function Navbar() {
       <AppBar
          position="static"
          elevation={0}
-         sx={{ borderRadius: "1rem", mt: "1rem" }}
+         sx={{ borderRadius: "1rem", my: "1rem" }}
       >
          <Toolbar
             sx={{

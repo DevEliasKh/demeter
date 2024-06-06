@@ -1,15 +1,13 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 import BlogArea from "@/ui/component/blogArea";
-import Footer from "@/ui/component/footer";
 // import Gallery from "@/ui/component/gallery";
-import Navbar from "@/ui/component/navbar";
 import PlantArea from "@/ui/component/plantArea";
 
 export default function Home() {
    return (
-      <Container maxWidth={false}>
-         <Navbar />
+      <Box>
+         {/* <Navbar /> */}
          <Box
             sx={{
                display: "flex",
@@ -80,7 +78,6 @@ export default function Home() {
          <BlogArea />
          {/* TODO: add gallery */}
          {/* <Gallery /> */}
-         <Footer />
-      </Container>
+      </Box>
    );
 }
