@@ -17,7 +17,9 @@ import {
 import React, { MouseEvent, useState } from "react";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import NextLink from "next/link";
 import SpaIcon from "@mui/icons-material/Spa";
+import { navigate } from "@/lib/functions";
 
 const navbarLink = ["خانه", "مقالات", "گالری", "درباره ما", "تماس با ما "];
 
@@ -50,15 +52,24 @@ export default function Navbar() {
                   gap: 2,
                }}
             >
-               {navbarLink.map((item) => (
-                  <Button
-                     key={item}
-                     sx={{ color: "secondary.main" }}
-                     disableRipple
-                  >
-                     {item}
-                  </Button>
-               ))}
+               {navbarLink.map((item) => {
+                  const path = navigate(item);
+                  return (
+                     <Button
+                        key={item}
+                        sx={{ color: "secondary.main" }}
+                        disableRipple
+                     >
+                        <Link
+                           component={NextLink}
+                           href={path}
+                           color="secondary"
+                        >
+                           {item}
+                        </Link>
+                     </Button>
+                  );
+               })}
             </Box>
             <IconButton
                id="basic-btn"
