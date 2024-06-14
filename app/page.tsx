@@ -1,6 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 
 import BlogArea from "@/ui/component/blogArea";
+import NextLik from "next/link";
 // import Gallery from "@/ui/component/gallery";
 import PlantArea from "@/ui/component/plantArea";
 
@@ -70,7 +71,15 @@ export default function Home() {
                      fontSize: "clamp(1vw,1rem,2vw)",
                   }}
                >
-                  مشاهده مقالات
+                  <Link
+                     component={NextLik}
+                     href={"./blogs"}
+                     color="secondary"
+                     sx={{ ":hover": { color: "primary.main" } }}
+                  >
+                     مشاهده مقالات
+                  </Link>
+                  {/* مشاهده مقالات */}
                </Button>
             </Box>
          </Box>

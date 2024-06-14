@@ -21,7 +21,7 @@ export default function BlogCard(blog: blogData) {
             component="img"
             alt={`${blog.name}`}
             src={`${blog.imgRcs}`}
-            sx={{}}
+            sx={{ width: "100%" }}
          ></Box>
          <Box
             sx={{

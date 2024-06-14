@@ -21,7 +21,15 @@ export default function RootLayout({
       <html lang="fa" dir="rtl">
          <ThemeProvider theme={theme}>
             <body>
-               <Container maxWidth={false}>
+               <Container
+                  maxWidth={false}
+                  sx={{
+                     minHeight: "100vh",
+                     display: "flex",
+                     flexDirection: "column",
+                     justifyContent: "space-between",
+                  }}
+               >
                   <Navbar />
                   {children}
                   <Footer />
