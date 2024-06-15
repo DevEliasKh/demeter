@@ -3,8 +3,6 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import data from "@/data/blogs.json";
 
-// TODO: fix not displaying image
-
 export default function Page(title: any) {
    const currentBlog = data.filter((blog) => blog.id == title.params.title)[0];
 

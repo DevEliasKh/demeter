@@ -12,12 +12,14 @@ import {
    MenuItem,
    MenuList,
    Toolbar,
+   Tooltip,
    Typography,
 } from "@mui/material";
 import React, { MouseEvent, useState } from "react";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import NextLink from "next/link";
+import PersonIcon from "@mui/icons-material/Person";
 import SpaIcon from "@mui/icons-material/Spa";
 import { navigate } from "@/lib/functions";
 
@@ -114,9 +116,23 @@ export default function Navbar() {
                   </MenuItem>
                ))}
             </Menu>
-            <IconButton color="secondary">
-               <SpaIcon />
-            </IconButton>
+            <Box
+               sx={{
+                  display: "flex",
+                  gap: "1rem",
+               }}
+            >
+               <Tooltip title="Log In">
+                  <IconButton color="secondary">
+                     <PersonIcon />
+                  </IconButton>
+               </Tooltip>
+               <Tooltip title="Demeter">
+                  <IconButton color="secondary" size="large">
+                     <SpaIcon />
+                  </IconButton>
+               </Tooltip>
+            </Box>
          </Toolbar>
       </AppBar>
    );
