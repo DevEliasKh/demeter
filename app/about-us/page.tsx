@@ -16,7 +16,7 @@ export default function Page() {
          <Box
             component="img"
             src="img/data-blog/01.jpg"
-            sx={{ maxWidth: "50vw" }}
+            sx={{ maxWidth: "50%" }}
          ></Box>
          <Typography>
             ما در اینجا با گردآوری برترین مقالات و آموزش های روز دنیا به شما در

@@ -22,7 +22,7 @@ export default function RootLayout({
          <ThemeProvider theme={theme}>
             <body>
                <Container
-                  maxWidth={false}
+                  // maxWidth={false}
                   sx={{
                      minHeight: "100vh",
                      display: "flex",

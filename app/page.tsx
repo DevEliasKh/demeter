@@ -28,8 +28,7 @@ export default function Home() {
                sx={{
                   display: "flex ",
                   flexDirection: "column",
-                  mr: "10vw",
-                  gap: "1vw",
+                  gap: "2vw",
                   maxWidth: "80ch",
                }}
             >
