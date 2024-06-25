@@ -1,14 +1,13 @@
 import { Box, Button, Link, Typography } from "@mui/material";
 
 import BlogArea from "@/ui/component/blogArea";
-import NextLik from "next/link";
+import NextLink from "next/link";
 // import Gallery from "@/ui/component/gallery";
 import PlantArea from "@/ui/component/plantArea";
 
 export default function Home() {
    return (
       <Box>
-         {/* <Navbar /> */}
          <Box
             sx={{
                display: "flex",
@@ -30,6 +29,8 @@ export default function Home() {
                   flexDirection: "column",
                   gap: "2vw",
                   maxWidth: "80ch",
+                  width: "100%",
+                  mb: "1rem",
                }}
             >
                <Typography
@@ -71,14 +72,13 @@ export default function Home() {
                   }}
                >
                   <Link
-                     component={NextLik}
+                     component={NextLink}
                      href={"./blogs"}
                      color="secondary"
                      sx={{ ":hover": { color: "primary.main" } }}
                   >
                      مشاهده مقالات
                   </Link>
-                  {/* مشاهده مقالات */}
                </Button>
             </Box>
          </Box>

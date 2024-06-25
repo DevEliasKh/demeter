@@ -3,7 +3,6 @@
 import "@/fonts/vazirmatn-v33.003/Vazirmatn-Variable-font-face.css";
 
 import { createTheme } from "@mui/material";
-import { forwardRef } from "react";
 
 export const theme = createTheme({
    direction: "rtl",
@@ -29,3 +28,11 @@ export const theme = createTheme({
       },
    },
 });
+
+theme.typography.h2 = {
+   fontWeight: "700",
+   fontSize: "4vw",
+   [theme.breakpoints.up("lg")]: {
+      fontSize: "2rem",
+   },
+};

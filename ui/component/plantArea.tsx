@@ -1,7 +1,8 @@
 "use client";
 
-import { Box, Card, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Card, Grid, Link, Typography } from "@mui/material";
 
+import NextLink from "next/link";
 import data from "@/data/plants.json";
 
 type plantType = {
@@ -13,17 +14,45 @@ type plantType = {
 export default function PlantArea() {
    return (
       <Grid container spacing={2}>
-         <Grid item xs={12}>
+         <Grid
+            item
+            xs={12}
+            sx={{ display: "flex", justifyContent: "space-between" }}
+         >
             <Typography
-               sx={{
-                  fontWeight: "700",
-                  fontSize: "2rem",
-               }}
+               variant="h2"
+               // sx={{
+               //    fontWeight: "700",
+               //    fontSize: {
+               //       lg: "2rem",
+               //       sm: "3vw",
+               //    },
+               // }}
             >
                گیاهان آپارتمانی را بهتر بشناسیم
             </Typography>
+            <Button
+               variant="contained"
+               sx={{
+                  alignSelf: "self-end",
+                  "&:hover": {
+                     color: "primary.main",
+                     backgroundColor: "secondary.main",
+                  },
+                  fontSize: "clamp(1vw,1rem,2vw)",
+               }}
+            >
+               <Link
+                  component={NextLink}
+                  href={"./blogs"}
+                  color="secondary"
+                  sx={{ ":hover": { color: "primary.main" } }}
+               >
+                  مشاهده گیاهان آپارتمانی
+               </Link>
+            </Button>
          </Grid>
-         {data.slice(0,4).map((item) => (
+         {data.slice(0, 4).map((item) => (
             <Grid item key={item.id} xs={12} sm={6}>
                <PlantCard {...item} />
             </Grid>

@@ -1,6 +1,7 @@
-import { Box, Card, Grid, Link, Typography } from "@mui/material";
+import { Box, Button, Card, Grid, Link, Typography } from "@mui/material";
 
 import BlogCard from "./blogCard";
+import NextLink from "next/link";
 import data from "@/data/blogs.json";
 
 export default function BlogArea() {
@@ -12,15 +13,35 @@ export default function BlogArea() {
             mt: "1rem",
          }}
       >
-         <Grid item xs={12}>
-            <Typography
+         <Grid
+            item
+            xs={12}
+            sx={{
+               display: "flex",
+               justifyContent: "space-between",
+            }}
+         >
+            <Typography variant="h2">آخرین مقالات</Typography>
+            <Button
+               variant="contained"
                sx={{
-                  fontSize: "2rem",
-                  fontWeight: "700",
+                  alignSelf: "self-end",
+                  "&:hover": {
+                     color: "primary.main",
+                     backgroundColor: "secondary.main",
+                  },
+                  fontSize: "clamp(1vw,1rem,2vw)",
                }}
             >
-               آخرین مقالات
-            </Typography>
+               <Link
+                  component={NextLink}
+                  href={"./blogs"}
+                  color="secondary"
+                  sx={{ ":hover": { color: "primary.main" } }}
+               >
+                  مشاهده مقالات
+               </Link>
+            </Button>
          </Grid>
 
          {data.slice(0, 4).map((blog) => (
