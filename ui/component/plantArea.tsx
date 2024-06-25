@@ -11,7 +11,6 @@ type plantType = {
 };
 
 export default function PlantArea() {
-   console.log(data);
    return (
       <Grid container spacing={2}>
          <Grid item xs={12}>
@@ -24,7 +23,7 @@ export default function PlantArea() {
                گیاهان آپارتمانی را بهتر بشناسیم
             </Typography>
          </Grid>
-         {data.map((item) => (
+         {data.slice(0,4).map((item) => (
             <Grid item key={item.id} xs={12} sm={6}>
                <PlantCard {...item} />
             </Grid>

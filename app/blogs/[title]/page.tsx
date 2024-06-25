@@ -1,10 +1,15 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 
 import Image from "next/image";
 import data from "@/data/blogs.json";
+import { useParams } from "next/navigation";
 
-export default function Page(title: any) {
-   const currentBlog = data.filter((blog) => blog.id == title.params.title)[0];
+export default function Page() {
+   const title: { title: string } = useParams();
+
+   const currentBlog = data.filter((blog) => blog.id == +title.title)[0];
 
    return (
       <Box

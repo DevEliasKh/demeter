@@ -23,7 +23,7 @@ export default function BlogArea() {
             </Typography>
          </Grid>
 
-         {data.map((blog) => (
+         {data.slice(0, 4).map((blog) => (
             <Grid item key={blog.id} xs={12} sm={6}>
                <BlogCard {...blog} />
             </Grid>
